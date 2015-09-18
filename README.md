@@ -6,3 +6,10 @@ This repository holds a custom Dockerfile for extending the agaveapi/agave-cli i
 * wget
 * which
 * a custom login prompt
+
+Usage:
+
+```bash
+docker run -it --rm=true -v $HOME/.agave:/root/.agave -v `pwd`:/home iplantc/agave-cli bash
+```
+
