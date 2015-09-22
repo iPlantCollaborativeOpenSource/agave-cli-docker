@@ -27,3 +27,5 @@ RUN git clone https://github.com/mwvaughn/agave-jsonpki.git && cp agave-jsonpki/
 
 # Customize prompt
 RUN echo export PS1=\""\[\e[32;4m\]agave-cli\[\e[0m\]:\u@\h:\w$ "\" >> /root/.bashrc
+
+RUN yum install -y nano
