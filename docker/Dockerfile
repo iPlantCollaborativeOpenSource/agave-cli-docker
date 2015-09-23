@@ -28,4 +28,8 @@ RUN git clone https://github.com/mwvaughn/agave-jsonpki.git && cp agave-jsonpki/
 # Customize prompt
 RUN echo export PS1=\""\[\e[32;4m\]agave-cli\[\e[0m\]:\u@\h:\w$ "\" >> /root/.bashrc
 
+# Install simple editor
 RUN yum install -y nano
+
+# Over-ride jobs-run-this with new code for workshop
+RUN git clone https://github.com/mwvaughn/jobs-run-this.git && cp jobs-run-this/jobs-run-this /usr/local/agave-cli/bin/ && chmod a+x /usr/local/agave-cli/bin/jobs-run-this && rm -rf jobs-run-this
